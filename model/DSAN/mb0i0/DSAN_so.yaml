@@ -1,0 +1,46 @@
+# Training related
+train: True
+use_pretrained: False
+draw_tsne: False
+draw_force: True
+
+n_epoch: 20
+# Optimizer related
+lr: 0.1  
+
+inf_dir: inference/v3
+#save 
+model_dir: model.pth
+log_dir: loss.csv
+inf_s: s.png
+inf_t: t.png
+tSNE: tSNE.png
+
+# Backbone
+backbone: resnet50
+# Transfer loss related
+reg_weight: 1
+clf_weight: 0
+transfer_weight: 0
+transfer_loss: lmmd
+
+#data
+src_dir: data/mb0i0/train
+tar_dir: data/mb0i0/test
+rfimage_source: data/mb0i0/ref.jpg
+rfimage_target: data/mb0i0/ref.jpg
+
+#inference
+test_source_dir: data/mb0i0/test
+test_target_dir: data/mb0i0/test
+
+#tSNE
+tSNE_source_dir: data/mb0i0/ori
+tSNE_target_dir: data/mb0i0/ori
+
+#pretrained
+pretrained: inf2/mb0i0/GRAM2/2/model_r.pth
+
+# others
+seed: 1
+num_workers: 1
